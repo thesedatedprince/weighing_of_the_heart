@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/start_button.gd" type="Script" id=1]
+[ext_resource path="res://assets/ui/select_characters.png" type="Texture" id=2]
+
+[node name="start_area" type="Area2D"]
+
+z_index = 2
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Z Index" ]
+
+[node name="start_sprite" type="Sprite" parent="." index="0"]
+
+z_index = 2
+texture = ExtResource( 2 )
+centered = false
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+[node name="start_collision" type="CollisionPolygon2D" parent="." index="1"]
+
+z_index = 2
+build_mode = 0
+polygon = PoolVector2Array( 0.0380287, 1.40047, 385.72, 0.543404, 385.434, 53.9675, 0.0380287, 54.2531 )
+_sections_unfolded = [ "Z Index" ]
+
+

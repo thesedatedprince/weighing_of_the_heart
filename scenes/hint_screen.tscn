@@ -1,0 +1,131 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scripts/hint_screen.gd" type="Script" id=1]
+[ext_resource path="res://assets/ui/results_board.png" type="Texture" id=2]
+[ext_resource path="res://assets/fonts/Apple Chancery.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 20
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 16
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[node name="hint_area" type="Area2D"]
+
+pause_mode = 2
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Pause" ]
+
+[node name="hint_sprite" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+
+[node name="hint_collision" type="CollisionPolygon2D" parent="." index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( 0.0380058, 17.6847, 767.801, 17.7419, 767.858, 328.115, -0.133408, 327.544 )
+_sections_unfolded = [ "Pause" ]
+
+[node name="character_unlocks" type="RichTextLabel" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 18.0
+margin_top = 29.0
+margin_right = 361.0
+margin_bottom = 309.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "Characters
+
+1. Enjoy the show with your first character.
+2. Both citizens should suffer equally.
+3. Their consensus is the victim suffers most between both life and eternity
+4. Lets all watch the show together."
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Characters
+
+1. Enjoy the show with your first character.
+2. Both citizens should suffer equally.
+3. Their consensus is the victim suffers most between both life and eternity
+4. Lets all watch the show together."
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "BBCode", "custom_colors", "custom_fonts" ]
+
+[node name="eye_unlocks" type="RichTextLabel" parent="." index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 420.0
+margin_top = 32.0
+margin_right = 752.0
+margin_bottom = 318.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "Eye unlocks
+
+1. Sebastian's eyes are hanging around in the second scene. He can see them with his eyes closed.
+2. Sebastian finds a fresh pair of eyes can discover new secrets.
+3. Annabelle is most awake in the third scene.
+4. Byron always watches tragedy with rapt attention."
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Eye unlocks
+
+1. Sebastian's eyes are hanging around in the second scene. He can see them with his eyes closed.
+2. Sebastian finds a fresh pair of eyes can discover new secrets.
+3. Annabelle is most awake in the third scene.
+4. Byron always watches tragedy with rapt attention."
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "BBCode", "custom_colors", "custom_fonts" ]
+
+

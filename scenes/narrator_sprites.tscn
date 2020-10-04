@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/narrator/narrator_hands_back.png" type="Texture" id=1]
+[ext_resource path="res://assets/narrator/narrator_hands_both.png" type="Texture" id=2]
+[ext_resource path="res://assets/narrator/narrator_arm_out.png" type="Texture" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "standing",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "both_arms",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "arm_out",
+"speed": 5.0
+} ]
+
+[node name="narrator_sprites" type="AnimatedSprite"]
+
+frames = SubResource( 1 )
+animation = "standing"
+centered = false
+
+
